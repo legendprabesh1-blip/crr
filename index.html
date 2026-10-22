@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resu - My Heart & Soul 💖</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600;700&family=Great+Vibes&family=Rozha+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Ambient Particles -->
+  <div class="ambient-hearts" id="ambientHearts"></div>
+
+  <section class="orientation-gate" id="orientationGate" aria-labelledby="gateTitle">
+    <div class="gate-card">
+      <span class="gate-mark" aria-hidden="true">🐼</span>
+      <p class="gate-kicker">A little world, made for you</p>
+      <h1 id="gateTitle">Before we begin</h1>
+      <p class="rotate-prompt">Please turn your phone sideways to open your story.</p>
+      <p class="landscape-hint">A wider view is ready for you.</p>
+      <form class="welcome-form" id="welcomeForm">
+        <label for="visitorName">What may I call you?</label>
+        <div class="welcome-form-row">
+          <input id="visitorName" name="visitorName" type="text" autocomplete="given-name" maxlength="40" required>
+          <button class="welcome-submit" type="submit">Enter <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Main Application Wrapper -->
+  <div class="app-container" id="appContainer" aria-hidden="true">
+
+    <!-- Top Navigation Bar -->
+    <header class="app-header">
+      <div class="brand-logo">
+        <span class="logo-icon">🐼</span>
+        <span class="logo-text">Resu <span class="heart-pulse">❤️</span></span>
+      </div>
+      
+      <div class="header-actions">
+        <button class="btn-icon split-toggle" id="splitToggle" type="button" title="Show chapters beside the story" aria-pressed="false">
+          <span class="icon" aria-hidden="true">◫</span>
+          <span class="btn-text">Split view</span>
+        </button>
+        <button class="btn-icon" id="musicToggle" title="Toggle Soft Music">
+          <span class="icon">🎵</span>
+          <span class="btn-text">Music</span>
+        </button>
+        <button class="btn-icon mobile-menu-btn" id="menuToggle" title="Toggle Menu" aria-controls="sidebar" aria-expanded="false">
+          <span class="icon">☰</span>
+        </button>
+      </div>
+    </header>
+
+    <button class="sidebar-backdrop" id="sidebarBackdrop" type="button" aria-label="Close chapter menu" hidden></button>
+
+    <!-- Sidebar Navigation for 15 Pages -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h3>Our 15 Chapters 📖</h3>
+        <button class="close-sidebar" id="closeSidebar">&times;</button>
+      </div>
+      <ul class="nav-links">
+        <li class="active" data-page="1"><span class="nav-num">01</span> First Hello 🌸</li>
+        <li data-page="2"><span class="nav-num">02</span> Cute Smile 😊</li>
+        <li data-page="3"><span class="nav-num">03</span> Hugs & Bears 🐻</li>
+        <li data-page="4"><span class="nav-num">04</span> Panda Snuggles 🐼</li>
+        <li data-page="5"><span class="nav-num">05</span> Starlight Eyes ✨</li>
+        <li data-page="6"><span class="nav-num">06</span> Golden Memories 📸</li>
+        <li data-page="7"><span class="nav-num">07</span> Video Diary 🎥</li>
+        <li data-page="8"><span class="nav-num">08</span> Sweet Whispers 💌</li>
+        <li data-page="9"><span class="nav-num">09</span> Romantic Beats 🎶</li>
+        <li data-page="10"><span class="nav-num">10</span> Forever Yours 💍</li>
+        <li data-page="11"><span class="nav-num">11</span> Angelic Resu 🧚‍♀️</li>
+        <li data-page="12"><span class="nav-num">12</span> Midnight Thoughts 🌙</li>
+        <li data-page="13"><span class="nav-num">13</span> Coffee & Laughs ☕</li>
+        <li data-page="14"><span class="nav-num">14</span> Magic Moments 🪄</li>
+        <li data-page="15"><span class="nav-num">15</span> Eternity With You ♾️</li>
+      </ul>
+    </nav>
+
+    <!-- Main Dynamic Content Area -->
+    <main class="content-area">
+
+      <!-- Bottom Navigation Controller -->
+      <div class="page-controller">
+        <button class="btn-nav btn-prev" id="prevBtn">
+          <span class="arrow">❮</span> Previous Chapter
+        </button>
+        <span class="page-indicator" id="pageIndicator">Chapter 1 of 15</span>
+        <button class="btn-nav btn-next" id="nextBtn">
+          Next Chapter <span class="arrow">❯</span>
+        </button>
+      </div>
+
+      <!-- PAGE 1: First Hello -->
+      <section class="page-screen active" id="page-1">
+        <div class="hero-card">
+          <div class="character-container">
+            <!-- Animated Bear SVG -->
+            <svg class="animated-character bear-char" viewBox="0 0 200 200">
+              <circle cx="100" cy="115" r="55" fill="#B08968" />
+              <circle cx="60" cy="65" r="22" fill="#B08968" />
+              <circle cx="60" cy="65" r="12" fill="#EDE0D4" />
+              <circle cx="140" cy="65" r="22" fill="#B08968" />
+              <circle cx="140" cy="65" r="12" fill="#EDE0D4" />
+              <ellipse cx="100" cy="125" rx="25" ry="18" fill="#EDE0D4" />
+              <ellipse cx="100" cy="118" rx="8" ry="6" fill="#3D2612" />
+              <circle cx="80" cy="100" r="6" fill="#3D2612" class="eye-blink" />
+              <circle cx="120" cy="100" r="6" fill="#3D2612" class="eye-blink" />
+              <ellipse cx="70" cy="112" rx="7" ry="4" fill="#FFB5A7" opacity="0.6" />
+              <ellipse cx="130" cy="112" rx="7" ry="4" fill="#FFB5A7" opacity="0.6" />
+              <path d="M 92 128 Q 100 135 108 128" stroke="#3D2612" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path class="waving-hand" d="M 150 120 Q 175 90 165 75" stroke="#B08968" stroke-width="16" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+
+          <h1 class="title-animated text-gradient">Welcome To Resu's World 💕</h1>
+          <p class="subtitle">A special magical realm created just for my favorite person!</p>
+
+          <div class="shayari-box font-dancing">
+            <p>“Your smile lends every morning its tender light;<br>
+            With you beside me, every road seems bright.” ✨</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <label class="upload-label" for="img-1">
+                <span class="upload-icon">📷</span>
+                <span>Add Resu's Photo</span>
+              </label>
+              <div class="media-holder" id="holder-img-1">
+                <img src="IMG-20261014-WA0002-01.jpeg" alt="A favorite portrait">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 2: Cute Smile -->
+      <section class="page-screen" id="page-2">
+        <div class="hero-card">
+          <div class="character-container">
+            <svg class="animated-character panda-char" viewBox="0 0 200 200">
+              <circle cx="100" cy="115" r="55" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="3"/>
+              <circle cx="55" cy="65" r="22" fill="#2B2B2B" />
+              <circle cx="145" cy="65" r="22" fill="#2B2B2B" />
+              <ellipse cx="78" cy="102" rx="14" ry="18" fill="#2B2B2B" transform="rotate(-15 78 102)" />
+              <ellipse cx="122" cy="102" rx="14" ry="18" fill="#2B2B2B" transform="rotate(15 122 102)" />
+              <circle cx="80" cy="100" r="5" fill="#FFFFFF" />
+              <circle cx="120" cy="100" r="5" fill="#FFFFFF" />
+              <ellipse cx="100" cy="118" rx="8" ry="5" fill="#2B2B2B" />
+              <ellipse cx="68" cy="118" rx="8" ry="5" fill="#FFB5A7" opacity="0.8" />
+              <ellipse cx="132" cy="118" rx="8" ry="5" fill="#FFB5A7" opacity="0.8" />
+              <path d="M 90 128 Q 100 138 110 128" stroke="#2B2B2B" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path class="heart-bounce" d="M 100 40 C 90 20, 60 30, 75 55 L 100 80 L 125 55 C 140 30, 110 20, 100 40 Z" fill="#FF4D6D" />
+            </svg>
+          </div>
+
+          <h1 class="title-animated font-rozha">That Million-Dollar Smile 😁</h1>
+
+          <div class="shayari-box font-caveat">
+            <p>“One glimpse of your smile still steals my heart away;<br>
+            Its gentle warmth can brighten any day.” 🌹</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <p class="media-caption">A little smile to brighten the day</p>
+              <div class="media-holder" id="holder-vid-2">
+                <video src="VID-20261020-WA0002.mp4" controls playsinline preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 3: Hugs & Bears -->
+      <section class="page-screen" id="page-3">
+        <div class="hero-card">
+          <div class="character-container duo-chars">
+            <span class="floating-emoji e-1">🧸</span>
+            <span class="floating-emoji e-2">💖</span>
+            <span class="floating-emoji e-3">🎀</span>
+          </div>
+
+          <h1 class="title-animated font-great">Warm Hugs For Resu 🤗</h1>
+
+          <div class="shayari-box font-dancing">
+            <p>“Within your arms, my restless thoughts find peace;<br>
+            Like shade at noon, your kindness brings release.” 🍃</p>
+          </div>
+
+          <div class="media-preview-grid dual-grid">
+            <div class="upload-card">
+              <p class="media-caption">A treasured school-day memory</p>
+              <div class="media-holder" id="holder-img-3a"><img src="IMG-20260917-WA0001.jpg" alt="A school-day memory"></div>
+            </div>
+            <div class="upload-card">
+              <p class="media-caption">A memory to keep close</p>
+              <div class="media-holder" id="holder-vid-3b"><video src="VID-20261020-WA0014.mp4" controls playsinline preload="metadata"></video></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 4: Panda Snuggles -->
+      <section class="page-screen" id="page-4">
+        <div class="hero-card">
+          <h1 class="title-animated font-rozha">Lazy Panda Vibes 🐼💤</h1>
+
+          <div class="shayari-box font-caveat">
+            <p>“Though clouds of discord gather now and then,<br>
+            One look from you brings peace to me again.” 💕</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <p class="media-caption">A soft moment, saved in motion</p>
+              <div class="media-holder" id="holder-vid-4"><video src="VID-20261020-WA0015.mp4" controls playsinline preload="metadata"></video></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 5: Starlight Eyes -->
+      <section class="page-screen" id="page-5">
+        <div class="hero-card">
+          <h1 class="title-animated font-great">Your Eyes Are Like Stars ✨</h1>
+
+          <div class="shayari-box font-dancing">
+            <p>“Your eyes hold stars no midnight can outshine;<br>
+            I find my way wherever they meet mine.” 🌌</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <figure class="upload-card">
+              <figcaption class="media-caption">A close-up worth remembering</figcaption>
+              <div class="media-holder" id="holder-img-5"><img src="IMG-20261020-WA0001.jpg" alt="A close-up portrait"></div>
+            </figure>
+            <figure class="upload-card">
+              <figcaption class="media-caption">A little moment in motion</figcaption>
+              <div class="media-holder"><video src="a24a5fba61c2bb6cefd71c5bc1e39a24.mp4" controls playsinline preload="metadata"></video></div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 6: Golden Memories -->
+      <section class="page-screen" id="page-6">
+        <div class="hero-card">
+          <h1 class="title-animated font-rozha">Golden Memories 🖼️</h1>
+
+          <div class="shayari-box font-caveat">
+            <p>“Each hour we shared, I keep as treasure rare;<br>
+            Your memory rests in tenderness and care.” ⏳</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <p class="media-caption">A favorite memory, kept in motion</p>
+              <div class="media-holder" id="holder-vid-6"><video src="VID-20261020-WA0016.mp4" controls playsinline preload="metadata"></video></div>
+            </div>
+            <figure class="upload-card">
+              <figcaption class="media-caption">Little moments, gathered together</figcaption>
+              <div class="media-holder"><img src="IMG-20261020-WA0013.jpg" alt="A collage of favorite moments"></div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 7: Video Diary -->
+      <section class="page-screen" id="page-7">
+        <div class="hero-card">
+          <h1 class="title-animated font-great">Resu's Video Diary 📹</h1>
+
+          <div class="shayari-box font-dancing">
+            <p>“In every frame, your presence lingers near;<br>
+            With every breath, your name is music clear.” 🎵</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <p class="media-caption">A page from the video diary</p>
+              <div class="media-holder" id="holder-vid-7"><video src="VID-20261021-WA0004.mp4" controls playsinline preload="metadata"></video></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 8: Sweet Whispers -->
+      <section class="page-screen" id="page-8">
+        <div class="hero-card">
+          <h1 class="title-animated font-rozha">Sweet Whispers 💌</h1>
+
+          <div class="shayari-box font-caveat">
+            <p>“You entered softly, yet made my heart your own;<br>
+            In you, my dearest dawn has brightly grown.” 🌅</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <p class="media-caption">A quiet moment among the flowers</p>
+              <div class="media-holder" id="holder-img-8"><img src="IMG-20261010-WA0003.jpg" alt="A quiet garden moment"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 9: Romantic Beats -->
+      <section class="page-screen" id="page-9">
+        <div class="hero-card">
+          <h1 class="title-animated font-great">Heartbeats For Resu 💓</h1>
+
+          <div class="shayari-box font-dancing">
+            <p>“My heart now keeps your rhythm as its own;<br>
+            Wherever I may look, your image is shown.” 🎶</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <p class="media-caption">A little rhythm for the heart</p>
+              <div class="media-holder" id="holder-vid-9"><video src="VID-20261021-WA0005.mp4" controls playsinline preload="metadata"></video></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 10: Forever Yours -->
+      <section class="page-screen" id="page-10">
+        <div class="hero-card">
+          <h1 class="title-animated font-rozha">Forever & Always 💍</h1>
+
+          <div class="shayari-box font-caveat">
+            <p>“To hold your hand through every passing year<br>
+            Is all the heaven I could wish for here.” 🤲</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <p class="media-caption">A precious family moment</p>
+              <div class="media-holder" id="holder-img-10"><img src="IMG-20261010-WA0004.jpg" alt="A precious family moment"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 11: Angelic Resu -->
+      <section class="page-screen" id="page-11">
+        <div class="hero-card">
+          <h1 class="title-animated font-great">My Sweet Angel 👼</h1>
+
+          <div class="shayari-box font-dancing">
+            <p>“Your gentle grace brings calm to all I do;<br>
+            Since you came into my life, each path seems new.” 🌟</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <p class="media-caption">A small, lovely moment</p>
+              <div class="media-holder" id="holder-vid-11"><video src="lv_7683201664882838804_20261006103119.mp4" controls playsinline preload="metadata"></video></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 12: Midnight Thoughts -->
+      <section class="page-screen" id="page-12">
+        <div class="hero-card">
+          <h1 class="title-animated font-rozha">Midnight Thoughts 🌙</h1>
+
+          <div class="shayari-box font-caveat">
+            <p>“Though midnight veils the heavens from my view,<br>
+            Your thought shines on and keeps my hope renewed.” ✨</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <p class="media-caption">A peaceful evening memory</p>
+              <div class="media-holder" id="holder-img-12"><img src="IMG-20261021-WA0001.jpg" alt="A peaceful evening memory"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 13: Coffee & Laughs -->
+      <section class="page-screen" id="page-13">
+        <div class="hero-card">
+          <h1 class="title-animated font-great">Coffee & Cute Laughs ☕</h1>
+
+          <div class="shayari-box font-dancing">
+            <p>“Your words are sweet as tea at day's decline;<br>
+            Each hour with you makes ordinary moments shine.” 🧁</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <p class="media-caption">A memory to make you smile</p>
+              <div class="media-holder" id="holder-vid-13"><video src="c1cc591ee9ab52e04f9389874fbf6c39.mp4" controls playsinline preload="metadata"></video></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 14: Magic Moments -->
+      <section class="page-screen" id="page-14">
+        <div class="hero-card">
+          <h1 class="title-animated font-rozha">Magic In Every Second 🪄</h1>
+
+          <div class="shayari-box font-caveat">
+            <p>“A quiet magic dwells in all you do;<br>
+            In every word, my thoughts return to you.” 💖</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <p class="media-caption">A bright moment beneath the leaves</p>
+              <div class="media-holder" id="holder-img-14"><img src="IMG-20261021-WA0002.jpg" alt="A bright garden portrait"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 15: Eternity With You -->
+      <section class="page-screen" id="page-15">
+        <div class="hero-card final-card">
+          <div class="character-container">
+            <span class="giant-heart-glow">💖</span>
+          </div>
+
+          <h1 class="title-animated font-great text-gradient">Eternity With Resu ♾️</h1>
+
+          <div class="shayari-box font-dancing highlight-box">
+            <p>“I cannot promise lifetimes yet unseen;<br>
+            But while I breathe, my heart is yours alone.” 💍❤️</p>
+          </div>
+
+          <div class="media-preview-grid">
+            <div class="upload-card">
+              <p class="media-caption">One last favorite moment</p>
+              <div class="media-holder" id="holder-vid-15"><video src="0eb6586144895969700c9afe635fb5ba.mp4" controls playsinline preload="metadata"></video></div>
+            </div>
+          </div>
+
+          <button class="btn-love-explosion" id="loveExplosionBtn">
+            Click For Love Surprise! 🎆
+          </button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
